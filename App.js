@@ -1,14 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import SplashScreen from './src/screens/Auth/SplashScreen'
-import SignUpScreen from './src/screens/Auth/SignUpScreen'
+import { NavigationContainer } from '@react-navigation/native';
+import Navigation from './src/navigations/Navigation';
 
 const App = () => {
   return (
-    <>
-      {/* <SplashScreen/> */}
-      <SignUpScreen/>
-    </>
+    <NavigationContainer>
+      <Navigation/>
+    </NavigationContainer>
   )
 }
 
