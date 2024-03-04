@@ -38,8 +38,8 @@ const SignUpScreen = () => {
             password: password,
         }
         console.log("data", data);
-        // const res = await axios.post('http://192.168.1.20:5000/api/student/create-student',data);
-        // console.log("response",res.data);
+        const res = await axios.post('http://192.168.0.158:3000/auth/signup',data)
+        console.log(res.data);
     }
 
     // Function to validate email format
