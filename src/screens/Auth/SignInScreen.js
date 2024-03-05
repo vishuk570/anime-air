@@ -12,6 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import AppLogo from '../../components/AppLogo';
 import axios from 'axios';
+import { API_URL } from "@env"
 
 const SignInScreen = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ const SignInScreen = () => {
       password: password,
     }
     console.log("data", data);
-    const res = await axios.post('http://192.168.0.158:3000/auth/login',data)
+    const res = await axios.post(`${API_URL}/auth/login`,data)
     console.log(res.data);
   }
 

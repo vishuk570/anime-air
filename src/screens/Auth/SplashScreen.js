@@ -4,9 +4,10 @@ import color from '../../constants/themes'
 import AppLogo from '../../components/AppLogo'
 import { useNavigation } from '@react-navigation/native'
 import { moderateScale, moderateVerticalScale } from 'react-native-size-matters';
-import { API_URL } from "@env"
+
 const SplashScreen = () => {
   const navigation = useNavigation();
+  
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('SignIn');

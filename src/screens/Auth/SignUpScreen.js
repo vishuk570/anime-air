@@ -8,6 +8,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import AppLogo from '../../components/AppLogo';
+import { API_URL } from "@env"
 
 const SignUpScreen = () => {
     const [name, setName] = useState("")
@@ -38,7 +39,7 @@ const SignUpScreen = () => {
             password: password,
         }
         console.log("data", data);
-        const res = await axios.post('http://192.168.0.158:3000/auth/signup',data)
+        const res = await axios.post(`${API_URL}/auth/signup`,data)
         console.log(res.data);
     }
 
